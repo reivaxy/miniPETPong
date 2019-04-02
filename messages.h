@@ -13,3 +13,4 @@
 #define MSG_INIT_AP_PWD "Access Point Password"
 #define MSG_INIT_HOME_SSID "Home Wifi SSID"
 #define MSG_INIT_HOME_PWD "Home Wifi Password"
+#define MSG_INIT_HOME_TITLE "Display Title"

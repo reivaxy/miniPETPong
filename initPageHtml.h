@@ -17,7 +17,7 @@ char initPage[] = "\
   <input name='APPwd' type='text' placeholder='" MSG_INIT_AP_PWD "'/><br/>\
   <input name='homeSsid' type='text' placeholder='" MSG_INIT_HOME_SSID "'/><br/>\
   <input name='homePwd' type='text' placeholder='" MSG_INIT_HOME_PWD "'/><br/>\
-  <input name='title' type='text' placeholder='" MSG_INIT_HOME_PWD "'/><br/>\
+  <input name='title' type='text' placeholder='" MSG_INIT_HOME_TITLE "'/><br/>\
   <input type='submit'/>\
 </form>\
 </body>\
