@@ -234,7 +234,7 @@ void refreshMenu() {
   display.clear();
   //display.drawString(0, 54, String(millis()));
   display.setTextAlignment(TEXT_ALIGN_RIGHT);
-  display.drawString(127, 0, "PONG");  
+  display.drawString(127, 0, config.getName());  
   display.setTextAlignment(TEXT_ALIGN_LEFT);
   char message[100];
   if(waitingOta) {
@@ -252,8 +252,7 @@ void refreshMenu() {
     sprintf(message, "Home: %s", ipOnHomeSsid.c_str());
     display.drawString(0, 50, message);
   }
-
-  
+ 
   if(digitalRead(FIRE_BUTTON) == HIGH) {
     startGame();
   }
@@ -288,6 +287,11 @@ void printHomePage() {
       // TODO: add checks
       config.setHomePwd(homePwd.c_str());
     }
+    // Read and save new title 
+    String title = server->arg("title");
+    if (title.length() > 0) {
+      config.setName(title.c_str());
+    }    
     config.saveToEeprom();
     sendText("Please reboot", 200);
   });
